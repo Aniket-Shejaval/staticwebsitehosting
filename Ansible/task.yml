@@ -1,0 +1,9 @@
+- hosts: web
+  become: yes
+  tasks: 
+    - name: install ngnix on server
+      action: yum name=ngnix state=installed
+
+    - name: start ngnix
+      action: service name-ngnix state=started
+
